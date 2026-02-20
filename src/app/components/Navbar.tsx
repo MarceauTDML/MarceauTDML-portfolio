@@ -7,15 +7,15 @@ export function Navbar() {
   const navLinks = [
     { label: "A propos", href: "#about" },
     { label: "Projets", href: "#projects" },
-    { label: "Tarifs", href: "#pricing" },
     { label: "Méthode", href: "#method" },
+    { label: "Tarifs", href: "#pricing" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-[#fafafa] w-full font-['Inter',sans-serif] border-b border-[rgba(0,0,0,0.06)]">
       <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 md:px-10 lg:px-16 py-5">
         {/* Logo */}
-        <a href="#" className="font-semibold text-[22px] text-black tracking-[-0.48px] shrink-0">
+        <a href="https://marceautdml.com" className="font-semibold text-[22px] text-black tracking-[-0.48px] shrink-0">
           Marceau TDML
         </a>
 
