@@ -2,7 +2,7 @@ import svgPaths from "../../imports/svg-hrs185whpn";
 
 function InstagramIcon() {
   return (
-    <a href="#" className="block size-[24px] hover:opacity-80 transition-opacity" aria-label="Instagram">
+    <a href="https://www.instagram.com/marceau_tdml" className="block size-[24px] hover:opacity-80 transition-opacity" aria-label="Instagram">
       <svg className="size-full" fill="none" viewBox="0 0 24 24">
         <g clipPath="url(#clip_ig)">
           <path d={svgPaths.p3c382d72} fill="#FAFAFA" />
@@ -19,7 +19,7 @@ function InstagramIcon() {
 
 function LinkedInIcon() {
   return (
-    <a href="#" className="block size-[24px] hover:opacity-80 transition-opacity" aria-label="LinkedIn">
+    <a href="https://www.linkedin.com/in/marceau-timbal-duclaux-de-martin-loury-09aa54302/" className="block size-[24px] hover:opacity-80 transition-opacity" aria-label="LinkedIn">
       <svg className="size-full" fill="none" viewBox="0 0 24 24">
         <g clipPath="url(#clip_li)">
           <path
