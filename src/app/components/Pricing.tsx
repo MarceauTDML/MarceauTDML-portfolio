@@ -164,6 +164,10 @@ export function Pricing() {
             <PricingCard key={card.title} {...card} />
           ))}
         </div>
+
+        <p className="text-center mt-8 text-[14px] md:text-[15px] font-medium tracking-[-0.09px] text-[rgba(0,0,0,0.55)]">
+          *Si le site plante, je le répare gratuitement sous 24h.
+        </p>
       </div>
     </section>
   );
