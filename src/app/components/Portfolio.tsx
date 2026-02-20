@@ -9,6 +9,7 @@ const projects = [
     description:
       "Refonte graphique du site d'une salle de sport bordelaise pour améliorer l'expérience utilisateur.\u200B",
     image: imgFitClub,
+    link: "https://www.figma.com/proto/Dn62T1Xukfa61MDjXCp9CB/Fit-Club-maquette?node-id=1-2&viewport=208%2C363%2C0.15&t=EYosW9fTqXejCCwH-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const projects = [
     description:
       "Création d'un site de type réseau social où les artistes peuvent publier leurs œuvres.",
     image: imgBe2Art,
+    link: "https://www.figma.com/proto/My2Zjn4G7ar07bNfP55Zid/2Be2Art-maquette?node-id=1-3&viewport=549%2C293%2C0.27&t=bT7b5efEhrJgfpnB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1", 
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const projects = [
     description:
       "Site de blog SEO et d'affiliation pour la promotion de masques LED (luminothérapie).",
     image: imgLuminea,
+    link: "https://www.figma.com/proto/vi9tN1tIZneLAyHHWBXvOO/Luminea-Skin-maquette?node-id=1-2&viewport=620%2C261%2C0.39&t=aCpGHrUISBdvXcuL-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1", 
   },
 ];
 
@@ -68,7 +71,9 @@ export function Portfolio() {
                   </p>
                 </div>
                 <a
-                  href="#"
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-medium text-[18px] leading-[1.45] tracking-[-0.09px] text-[#667eea] hover:text-[#5a6fd6] transition-colors"
                 >
                   Voir le projet &rarr;
