@@ -94,25 +94,25 @@ export function Footer() {
                 Légal
               </h6>
               <a
-                href="#"
+                href="https://marceautdml.com/cgu"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
               >
                 CGU
               </a>
               <a
-                href="#"
+                href="https://marceautdml.com/cgv"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
               >
                 CGV
               </a>
               <a
-                href="#"
+                href="https://marceautdml.com/mentions-legales"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
               >
                 Mentions légales
               </a>
               <a
-                href="#"
+                href="https://marceautdml.com/confidentialite"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
               >
                 Confidentialité
