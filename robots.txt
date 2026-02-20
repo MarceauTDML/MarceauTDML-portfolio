@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Lien vers le plan du site pour aider Google à tout trouver rapidement
+Sitemap: https://marceautdml.com/sitemap.xml
