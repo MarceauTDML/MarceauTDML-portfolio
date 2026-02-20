@@ -1,4 +1,4 @@
-import imgAbout from "figma:asset/0c8e08399e5532016c8fca63fe53b4338a2fe74b.png";
+import imgAbout from "../../assets/0c8e08399e5532016c8fca63fe53b4338a2fe74b.png";
 
 export function About() {
   return (

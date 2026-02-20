@@ -1,6 +1,6 @@
-import imgFitClub from "figma:asset/3c9e706ef5aadd685e4f2994232a98ef48e8beec.png";
-import imgBe2Art from "figma:asset/8eef97931d90371f9b7c550e680b141e38c765f5.png";
-import imgLuminea from "figma:asset/60303adee7afb98f2b8384a329662f282ea1dee9.png";
+import imgFitClub from "../../assets/3c9e706ef5aadd685e4f2994232a98ef48e8beec.png";
+import imgBe2Art from "../../assets/8eef97931d90371f9b7c550e680b141e38c765f5.png";
+import imgLuminea from "../../assets/60303adee7afb98f2b8384a329662f282ea1dee9.png";
 
 const projects = [
   {
