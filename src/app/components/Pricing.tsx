@@ -72,16 +72,16 @@ function PricingCard({
           ))}
         </div>
 
-        {/* Button */}
-        <button
-          className={`w-full rounded-xl px-4 py-3 font-semibold text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.45] transition-colors cursor-pointer ${
+        <a
+          href="#contact"
+          className={`block text-center w-full rounded-xl px-4 py-3 font-semibold text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.45] transition-colors cursor-pointer ${
             buttonStyle === "primary"
               ? "bg-[#667eea] text-white hover:bg-[#5a6fd6]"
               : "bg-transparent text-[#667eea] border-2 border-[#667eea] hover:bg-[#667eea]/5"
           }`}
         >
           {buttonText}
-        </button>
+        </a>
       </div>
       <div
         aria-hidden="true"

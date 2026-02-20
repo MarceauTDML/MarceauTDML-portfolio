@@ -45,7 +45,7 @@ function LinkedInIcon() {
 export function Footer() {
   return (
     <footer
-      id="contact"
+      id="footer"
       className="w-full bg-[#111827] font-['Inter',sans-serif]"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20">
