@@ -3,6 +3,7 @@ import { About } from "../components/About";
 import { Portfolio } from "../components/Portfolio";
 import { Process } from "../components/Process";
 import { Pricing } from "../components/Pricing";
+import { Faq } from "../components/Faq";
 import { Contact } from "../components/Contact";
 
 export function Home() {
@@ -14,6 +15,7 @@ export function Home() {
       <Process />
       <Pricing />
       <Contact />
+      <Faq />
     </>
   );
 }
