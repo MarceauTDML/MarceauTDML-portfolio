@@ -2,8 +2,14 @@ import svgPaths from "../../imports/svg-hrs185whpn";
 
 function InstagramIcon() {
   return (
-    <a href="https://www.instagram.com/marceau_tdml" className="block size-[24px] hover:opacity-80 transition-opacity" aria-label="Instagram" target="_blank">
-      <svg className="size-full" fill="none" viewBox="0 0 24 24">
+    <a 
+      href="https://www.instagram.com/marceau_tdml" 
+      className="block size-[24px] hover:opacity-80 transition-opacity rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827]" 
+      aria-label="Mon profil Instagram (nouvel onglet)" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <svg className="size-full" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <g clipPath="url(#clip_ig)">
           <path d={svgPaths.p3c382d72} fill="#FAFAFA" />
         </g>
@@ -19,8 +25,14 @@ function InstagramIcon() {
 
 function LinkedInIcon() {
   return (
-    <a href="https://www.linkedin.com/in/marceau-timbal-duclaux-de-martin-loury-09aa54302/" className="block size-[24px] hover:opacity-80 transition-opacity" aria-label="LinkedIn" target="_blank">
-      <svg className="size-full" fill="none" viewBox="0 0 24 24">
+    <a 
+      href="https://www.linkedin.com/in/marceau-timbal-duclaux-de-martin-loury-09aa54302/" 
+      className="block size-[24px] hover:opacity-80 transition-opacity rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827]" 
+      aria-label="Mon profil LinkedIn (nouvel onglet)" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <svg className="size-full" fill="none" viewBox="0 0 24 24" aria-hidden="true">
         <g clipPath="url(#clip_li)">
           <path
             clipRule="evenodd"
@@ -46,11 +58,11 @@ export function Footer() {
   return (
     <footer
       id="footer"
+      role="contentinfo"
       className="w-full bg-[#111827] font-['Inter',sans-serif]"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20">
         <div className="border-t border-[rgba(250,250,250,0.1)] pt-16 md:pt-20 flex flex-col lg:flex-row gap-12 lg:gap-28">
-          {/* Left column */}
           <div className="flex-1 flex flex-col gap-12 md:gap-14">
             <div className="flex flex-col gap-2">
               <h5 className="font-semibold text-[22px] md:text-[24px] tracking-[-0.48px] leading-[1.45] text-[#fafafa]">
@@ -61,22 +73,20 @@ export function Footer() {
                 élégant.
               </p>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6" aria-label="Réseaux sociaux">
               <InstagramIcon />
               <LinkedInIcon />
             </div>
           </div>
 
-          {/* Right columns */}
           <div className="flex flex-col sm:flex-row gap-10 sm:gap-10 md:gap-10">
-            {/* Contact */}
-            <nav className="flex flex-col gap-2 min-w-[200px]">
+            <nav className="flex flex-col gap-2 min-w-[200px]" aria-label="Menu de contact">
               <h6 className="font-semibold text-[16px] tracking-[-0.08px] leading-[1.45] text-[#fafafa] pb-3">
                 Contact
               </h6>
               <a
                 href="mailto:marceautdml@gmail.com"
-                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
+                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 marceautdml@gmail.com
               </a>
@@ -88,32 +98,31 @@ export function Footer() {
               </p>
             </nav>
 
-            {/* Legal */}
-            <nav className="flex flex-col gap-2 min-w-[160px]">
+            <nav className="flex flex-col gap-2 min-w-[160px]" aria-label="Menu des liens légaux">
               <h6 className="font-semibold text-[16px] tracking-[-0.08px] leading-[1.45] text-[#fafafa] pb-3">
                 Légal
               </h6>
               <a
                 href="https://marceautdml.com/cgu"
-                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
+                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 CGU
               </a>
               <a
                 href="https://marceautdml.com/cgv"
-                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
+                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 CGV
               </a>
               <a
                 href="https://marceautdml.com/mentions-legales"
-                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
+                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 Mentions légales
               </a>
               <a
                 href="https://marceautdml.com/confidentialite"
-                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors"
+                className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 Confidentialité
               </a>

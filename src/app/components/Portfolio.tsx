@@ -30,12 +30,12 @@ export function Portfolio() {
   return (
     <section
       id="projects"
+      aria-labelledby="portfolio-heading"
       className="w-full bg-background font-['Inter',sans-serif] transition-colors duration-300"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20 lg:py-28">
-        {/* Header */}
         <div className="flex flex-col gap-4 mb-12 md:mb-16">
-          <h3 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-foreground">
+          <h3 id="portfolio-heading" className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-foreground">
             Un aperçu de mon savoir-faire
           </h3>
           <p className="font-medium text-[18px] md:text-[20px] leading-[1.45] tracking-[-0.1px] text-muted-foreground">
@@ -44,7 +44,6 @@ export function Portfolio() {
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <article
@@ -54,7 +53,7 @@ export function Portfolio() {
               <div className="h-[240px] overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Aperçu du projet ${project.title}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -71,7 +70,8 @@ export function Portfolio() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-[18px] leading-[1.45] tracking-[-0.09px] text-[#667eea] hover:text-[#5a6fd6] transition-colors"
+                  aria-label={`Voir la maquette Figma du projet ${project.title} (nouvel onglet)`}
+                  className="font-medium text-[18px] leading-[1.45] tracking-[-0.09px] text-[#667eea] hover:text-[#5a6fd6] transition-colors outline-none rounded-md focus-visible:ring-2 focus-visible:ring-[#667eea]"
                 >
                   Voir le projet &rarr;
                 </a>
