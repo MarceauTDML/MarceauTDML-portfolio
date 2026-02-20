@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import svgPaths from "../../imports/svg-hrs185whpn";
 
 function InstagramIcon() {
@@ -69,8 +70,7 @@ export function Footer() {
                 Marceau TDML
               </h5>
               <p className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] max-w-[380px]">
-                Votre site professionnel clé en main, simple, efficace et
-                élégant.
+                Votre site professionnel clé en main, simple, efficace et élégant.
               </p>
             </div>
             <div className="flex items-center gap-6" aria-label="Réseaux sociaux">
@@ -102,30 +102,30 @@ export function Footer() {
               <h6 className="font-semibold text-[16px] tracking-[-0.08px] leading-[1.45] text-[#fafafa] pb-3">
                 Légal
               </h6>
-              <a
-                href="https://marceautdml.com/cgu"
+              <Link
+                to="/cgu"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 CGU
-              </a>
-              <a
-                href="https://marceautdml.com/cgv"
+              </Link>
+              <Link
+                to="/cgv"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 CGV
-              </a>
-              <a
-                href="https://marceautdml.com/mentions-legales"
+              </Link>
+              <Link
+                to="/mentions-legales"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 Mentions légales
-              </a>
-              <a
-                href="https://marceautdml.com/confidentialite"
+              </Link>
+              <Link
+                to="/confidentialite"
                 className="font-medium text-[16px] tracking-[-0.08px] leading-[1.45] text-[rgba(250,250,250,0.55)] hover:text-[rgba(250,250,250,0.8)] transition-colors outline-none rounded-sm focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111827] w-fit"
               >
                 Confidentialité
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
