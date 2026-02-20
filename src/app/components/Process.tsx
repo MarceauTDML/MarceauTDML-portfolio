@@ -2,26 +2,22 @@ const steps = [
   {
     id: 1,
     title: "1. Échange & Analyse",
-    description:
-      "Tout projet web commence par une analyse précise. Lors de cet échange initial, en visio Google Meet, je vous pose les questions essentielles pour verrouiller la direction à prendre.",
+    description: "Tout projet web commence par une analyse précise. Lors de cet échange initial, en visio Google Meet, je vous pose les questions essentielles pour verrouiller la direction à prendre.",
   },
   {
     id: 2,
     title: "2. Conception de la maquette",
-    description:
-      "Avant de développer le site web, je conçois la maquette interactive de ce dernier.",
+    description: "Avant de développer le site web, je conçois la maquette interactive de ce dernier.",
   },
   {
     id: 3,
     title: "3. Développement & Optimisation",
-    description:
-      "C'est la phase de construction. Sur la base de la maquette validée, je fige le design pour garantir la propreté et la stabilité du site.",
+    description: "C'est la phase de construction. Sur la base de la maquette validée, je fige le design pour garantir la propreté et la stabilité du site.",
   },
   {
     id: 4,
     title: "4. Livraison",
-    description:
-      "Votre site est finalisé. Je procède au déploiement technique sur votre hébergement.",
+    description: "Votre site est finalisé. Je procède au déploiement technique sur votre hébergement.",
   },
 ];
 
@@ -29,12 +25,12 @@ export function Process() {
   return (
     <section
       id="method"
-      className="w-full bg-[#fafafa] font-['Inter',sans-serif]"
+      className="w-full bg-background font-['Inter',sans-serif] transition-colors duration-300"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20 lg:py-28 flex flex-col lg:flex-row gap-10 lg:gap-12 items-start">
         {/* Header */}
         <div className="flex-1 shrink-0">
-          <h3 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-black">
+          <h3 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-foreground">
             Votre site vitrine en 4 étapes simples
           </h3>
         </div>

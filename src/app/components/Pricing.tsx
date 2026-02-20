@@ -6,9 +6,9 @@ function CheckIcon() {
       <svg className="size-full" fill="none" viewBox="0 0 24 24">
         <path
           d={svgPaths.p2b309e80}
-          stroke="black"
+          stroke="currentColor"
           strokeLinecap="round"
-          strokeOpacity="0.55"
+          strokeOpacity="0.8"
           strokeWidth="2"
         />
       </svg>
@@ -23,7 +23,8 @@ interface PricingCardProps {
   priceLabel?: string;
   features: string[];
   buttonText: string;
-  buttonStyle: "primary" | "outline";
+  buttonStyle: "primary" | "outline" | "white";
+  isHighlighted?: boolean;
 }
 
 function PricingCard({
@@ -34,38 +35,66 @@ function PricingCard({
   features,
   buttonText,
   buttonStyle,
+  isHighlighted,
 }: PricingCardProps) {
   return (
-    <div className="bg-white rounded-2xl relative flex flex-col h-full">
-      <div className="overflow-hidden rounded-2xl flex flex-col gap-8 p-6 pt-8 flex-1">
+    <div
+      className={`rounded-2xl relative flex flex-col h-full transition-all duration-300 ${
+        isHighlighted
+          ? "bg-gradient-to-br from-[#667eea] to-[#764ba2] border-transparent shadow-xl md:-translate-y-2" 
+          : "bg-card border border-border"
+      }`}
+    >
+      <div className="overflow-hidden rounded-2xl flex flex-col gap-8 p-6 pt-8 flex-1 z-10">
         {/* Header */}
         <div className="flex flex-col">
-          <h5 className="font-semibold text-[20px] tracking-[-0.1px] leading-[1.4] text-black">
+          <h5
+            className={`font-semibold text-[20px] tracking-[-0.1px] leading-[1.4] ${
+              isHighlighted ? "text-white" : "text-card-foreground"
+            }`}
+          >
             {title}
           </h5>
-          <p className="font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] text-[rgba(0,0,0,0.55)]">
+          <p
+            className={`font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] ${
+              isHighlighted ? "text-white/80" : "text-muted-foreground"
+            }`}
+          >
             {subtitle}
           </p>
         </div>
 
         {/* Price */}
         <div className="flex items-baseline gap-1.5">
-          <span className="font-bold text-[48px] md:text-[56px] tracking-[-1.12px] leading-[1.1] text-[#667eea]">
+          <span
+            className={`font-bold text-[48px] md:text-[56px] tracking-[-1.12px] leading-[1.1] ${
+              isHighlighted ? "text-white" : "text-[#667eea]"
+            }`}
+          >
             {price}
           </span>
           {priceLabel && (
-            <span className="font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] text-[rgba(0,0,0,0.55)]">
+            <span
+              className={`font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] ${
+                isHighlighted ? "text-white/80" : "text-muted-foreground"
+              }`}
+            >
               {priceLabel}
             </span>
           )}
         </div>
 
         {/* Features */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 flex-1">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-2">
+            <div
+              key={index}
+              className={`flex items-center gap-2 ${
+                isHighlighted ? "text-white" : "text-card-foreground"
+              }`}
+            >
               <CheckIcon />
-              <span className="font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] text-black">
+              <span className="font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4]">
                 {feature}
               </span>
             </div>
@@ -74,19 +103,25 @@ function PricingCard({
 
         <a
           href="#contact"
-          className={`block text-center w-full rounded-xl px-4 py-3 font-semibold text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.45] transition-colors cursor-pointer ${
+          className={`block text-center w-full rounded-xl px-4 py-3 font-semibold text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.45] transition-colors cursor-pointer mt-auto ${
             buttonStyle === "primary"
               ? "bg-[#667eea] text-white hover:bg-[#5a6fd6]"
+              : buttonStyle === "white"
+              ? "bg-white text-[#667eea] hover:bg-white/90 shadow-sm"
               : "bg-transparent text-[#667eea] border-2 border-[#667eea] hover:bg-[#667eea]/5"
           }`}
         >
           {buttonText}
         </a>
       </div>
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none rounded-2xl border-[0.5px] border-[rgba(0,0,0,0.1)] shadow-[0px_0px_4.4px_0px_rgba(0,0,0,0.06),0px_5px_19px_0px_rgba(0,0,0,0.08)]"
-      />
+      
+      {/* Ombre subtile pour les cartes classiques */}
+      {!isHighlighted && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none rounded-2xl border-[0.5px] border-border shadow-[0px_0px_4.4px_0px_rgba(0,0,0,0.06),0px_5px_19px_0px_rgba(0,0,0,0.08)]"
+        />
+      )}
     </div>
   );
 }
@@ -105,9 +140,10 @@ const pricingData: PricingCardProps[] = [
       "Prix fixe",
     ],
     buttonText: "Commencer mon projet",
-    buttonStyle: "primary",
+    buttonStyle: "white", // On utilise le nouveau style de bouton blanc
+    isHighlighted: true, // C'est ici qu'on active la mise en avant violette !
   },
-    {
+  {
     title: "Maintenance",
     subtitle: "1 intervention sur le site en 24 à 72h",
     price: "80€",
@@ -144,28 +180,28 @@ export function Pricing() {
   return (
     <section
       id="pricing"
-      className="w-full bg-[#fafafa] font-['Inter',sans-serif]"
+      className="w-full bg-background font-['Inter',sans-serif] transition-colors duration-300"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20 lg:py-28">
         {/* Header */}
         <div className="flex flex-col gap-4 mb-12 md:mb-16">
-          <h3 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-black">
+          <h3 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-foreground">
             Une offre simple et transparente
           </h3>
-          <p className="font-medium text-[18px] md:text-[20px] leading-[1.45] tracking-[-0.1px] text-[rgba(0,0,0,0.55)]">
+          <p className="font-medium text-[18px] md:text-[20px] leading-[1.45] tracking-[-0.1px] text-muted-foreground">
             Pas de surprise, pas de frais cachés. Un prix fixe pour une
             prestation complète et de qualité.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-8 items-stretch">
           {pricingData.map((card) => (
             <PricingCard key={card.title} {...card} />
           ))}
         </div>
 
-        <p className="mt-8 text-[14px] md:text-[15px] font-medium tracking-[-0.09px] text-[rgba(0,0,0,0.55)]">
+        <p className="mt-8 text-[14px] md:text-[15px] font-medium tracking-[-0.09px] text-muted-foreground">
           *Si le site plante, je le répare gratuitement sous 24h, hors week-end et jours fériés.
         </p>
       </div>

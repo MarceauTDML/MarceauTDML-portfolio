@@ -21,7 +21,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen w-full flex flex-col bg-[#fafafa] font-['Inter',sans-serif]">
+      <div className="min-h-screen w-full flex flex-col bg-background text-foreground font-['Inter',sans-serif] transition-colors duration-300">
         <Navbar />
         <main className="flex-1">
           <Routes>

@@ -4,18 +4,17 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full bg-[#fafafa] font-['Inter',sans-serif]"
+      className="w-full bg-background font-['Inter',sans-serif] transition-colors duration-300"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-16 py-16 md:py-20 lg:py-28 flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-        {/* Text Content */}
         <div className="flex-1 flex flex-col gap-6">
-          <p className="font-medium text-[18px] md:text-[20px] text-[rgba(0,0,0,0.55)] tracking-[-0.1px] leading-[1.45]">
+          <p className="font-medium text-[18px] md:text-[20px] text-muted-foreground tracking-[-0.1px] leading-[1.45]">
             A propos
           </p>
-          <h2 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-black">
+          <h2 className="font-bold text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px] leading-[1.2] tracking-[-0.96px] text-foreground">
             L'excellence technique au service de votre entreprise
           </h2>
-          <div className="font-medium text-[16px] md:text-[18px] leading-[1.45] tracking-[-0.09px] text-[rgba(0,0,0,0.45)] flex flex-col gap-4">
+          <div className="font-medium text-[16px] md:text-[18px] leading-[1.45] tracking-[-0.09px] text-muted-foreground flex flex-col gap-4">
             <p>
               Actuellement à Epitech Paris, l'une des écoles d'informatique les
               plus exigeantes de France, j'ai fait le choix de mettre mes
@@ -35,7 +34,6 @@ export function About() {
           </div>
         </div>
 
-        {/* Image */}
         <div className="flex-1 w-full lg:w-auto">
           <img
             src={imgAbout}
