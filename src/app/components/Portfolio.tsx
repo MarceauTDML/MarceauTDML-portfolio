@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: "Luminea Skin",
     description:
-      "Site de blog SEO et d'affiliation pour la promotion de masques LED (luminothérapie).",
+      "Site de blog SEO et d'affiliation pour la promotion de masques de luminothérapie.",
     image: imgLuminea,
     link: "https://www.figma.com/proto/vi9tN1tIZneLAyHHWBXvOO/Luminea-Skin-maquette?node-id=1-2&viewport=620%2C261%2C0.39&t=aCpGHrUISBdvXcuL-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1", 
   },

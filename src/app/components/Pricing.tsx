@@ -93,6 +93,21 @@ function PricingCard({
 
 const pricingData: PricingCardProps[] = [
   {
+    title: "Site vitrine",
+    subtitle: "Livré sous 10 à 15 jours ouvrés",
+    price: "800€",
+    features: [
+      "Site web sur mesure et sécurisé",
+      "Entre 1 à 5 pages avec SEO",
+      "Responsive mobile et tablette",
+      "Mise en ligne du site",
+      "30J de garantie technique*",
+      "Prix fixe",
+    ],
+    buttonText: "Commencer mon projet",
+    buttonStyle: "primary",
+  },
+    {
     title: "Maintenance",
     subtitle: "1 intervention sur le site en 24 à 72h",
     price: "80€",
@@ -107,21 +122,6 @@ const pricingData: PricingCardProps[] = [
     ],
     buttonText: "Demander une maintenance",
     buttonStyle: "outline",
-  },
-  {
-    title: "Site vitrine",
-    subtitle: "Livré sous 10 à 15 jours ouvrés",
-    price: "800€",
-    features: [
-      "Site web sur mesure et sécurisé",
-      "Entre 1 à 5 pages avec SEO",
-      "Responsive mobile et tablette",
-      "Mise en ligne du site",
-      "30J de garantie technique*",
-      "Prix fixe",
-    ],
-    buttonText: "Commencer mon projet",
-    buttonStyle: "primary",
   },
   {
     title: "Formation",
@@ -165,8 +165,8 @@ export function Pricing() {
           ))}
         </div>
 
-        <p className="text-center mt-8 text-[14px] md:text-[15px] font-medium tracking-[-0.09px] text-[rgba(0,0,0,0.55)]">
-          *Si le site plante, je le répare gratuitement sous 24h.
+        <p className="mt-8 text-[14px] md:text-[15px] font-medium tracking-[-0.09px] text-[rgba(0,0,0,0.55)]">
+          *Si le site plante, je le répare gratuitement sous 24h, hors week-end et jours fériés.
         </p>
       </div>
     </section>

@@ -52,6 +52,19 @@ export function Contact() {
           </div>
 
           <div className="flex flex-col gap-2">
+            <label htmlFor="phone" className="font-semibold text-[16px] tracking-[-0.09px] text-black">
+              Téléphone <span className="text-[#667eea]">(facultatif)</span>
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="rounded-xl border border-[rgba(0,0,0,0.1)] px-4 py-3 font-medium text-[16px] text-black placeholder-[rgba(0,0,0,0.3)] focus:outline-none focus:border-[#667eea] focus:ring-1 focus:ring-[#667eea] transition-all"
+              placeholder="Ex: 06 25 18 35 12"
+            />
+          </div>
+
+          <div className="flex flex-col gap-2">
             <label htmlFor="subject" className="font-semibold text-[16px] tracking-[-0.09px] text-black">
               Objet <span className="text-[#667eea]">*</span>
             </label>
