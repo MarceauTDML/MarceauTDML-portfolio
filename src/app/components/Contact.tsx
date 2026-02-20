@@ -60,7 +60,7 @@ export function Contact() {
               type="tel"
               id="phone"
               className="rounded-xl border border-border bg-transparent px-4 py-3 font-medium text-[16px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-[#667eea] focus:ring-1 focus:ring-[#667eea] transition-all"
-              placeholder="Ex: 06 25 18 35 12"
+              placeholder="Ex: 06 25 15 33 33"
             />
           </div>
 
