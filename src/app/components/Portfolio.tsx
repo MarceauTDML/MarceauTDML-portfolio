@@ -1,5 +1,5 @@
 import imgFitClub from "../../assets/3c9e706ef5aadd685e4f2994232a98ef48e8beec.png";
-import imgBe2Art from "../../assets/8eef97931d90371f9b7c550e680b141e38c765f5.png";
+import imgBe2Art from "../../assets/8eef97931d90371f9b7c550e680b141e38c765f5.jpg";
 import imgLuminea from "../../assets/60303adee7afb98f2b8384a329662f282ea1dee9.png";
 
 const projects = [
@@ -12,10 +12,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "2Be2Art",
-    description: "Création d'un site de type réseau social où les artistes peuvent publier leurs œuvres.",
+    title: "Elise Psychologie",
+    description: "De l'idée à la mise en ligne d'un site vitrine pour une psychologue indépendante.",
     image: imgBe2Art,
-    link: "https://www.figma.com/proto/My2Zjn4G7ar07bNfP55Zid/2Be2Art-maquette?node-id=1-3&viewport=549%2C293%2C0.27&t=bT7b5efEhrJgfpnB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1", 
+    link: "https://psy.marceautdml.com", 
   },
   {
     id: 3,
