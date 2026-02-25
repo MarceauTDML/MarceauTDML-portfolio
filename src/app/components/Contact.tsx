@@ -12,6 +12,8 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showModal, setShowModal] = useState(false);
   
+  const [isFormInteracted, setIsFormInteracted] = useState(false);
+  
   const [captchaToken, setCaptchaToken] = useState("");
   const captchaRef = useRef<HCaptcha>(null);
 
@@ -50,7 +52,7 @@ export function Contact() {
       if (response.ok) {
         setShowModal(true);
         setFormData({ email: "", phone: "", subject: "", message: "" });
-        
+        setIsFormInteracted(false);
         setCaptchaToken("");
         captchaRef.current?.resetCaptcha();
       } else {
@@ -80,11 +82,12 @@ export function Contact() {
 
           <form
             onSubmit={handleSubmit}
+            onFocus={() => setIsFormInteracted(true)}
             className="bg-card p-6 md:p-8 rounded-2xl flex flex-col gap-6 relative border-[0.5px] border-border shadow-[0px_0px_4.4px_0px_rgba(0,0,0,0.06),0px_5px_19px_0px_rgba(0,0,0,0.08)]"
           >
             <div className="flex flex-col gap-2">
               <label htmlFor="email" className="font-semibold text-[16px] tracking-[-0.09px] text-card-foreground">
-                Email <span aria-hidden="true" className="text-[#667eea]">*</span>
+                Email <span aria-hidden="true" className="text-[#4f46e5]">*</span>
                 <span className="sr-only">(Requis)</span>
               </label>
               <input
@@ -101,7 +104,7 @@ export function Contact() {
 
             <div className="flex flex-col gap-2">
               <label htmlFor="phone" className="font-semibold text-[16px] tracking-[-0.09px] text-card-foreground flex justify-between">
-                <span>Téléphone <span className="text-[#667eea]">(facultatif)</span></span>
+                <span>Téléphone <span className="text-[#4f46e5]">(facultatif)</span></span>
               </label>
               <input
                 type="tel"
@@ -117,7 +120,7 @@ export function Contact() {
 
             <div className="flex flex-col gap-2">
               <label htmlFor="subject" className="font-semibold text-[16px] tracking-[-0.09px] text-card-foreground flex justify-between">
-                <span>Objet <span aria-hidden="true" className="text-[#667eea]">*</span></span>
+                <span>Objet <span aria-hidden="true" className="text-[#4f46e5]">*</span></span>
                 <span className="text-xs text-muted-foreground font-normal self-end">{formData.subject.length}/100</span>
               </label>
               <input
@@ -135,7 +138,7 @@ export function Contact() {
 
             <div className="flex flex-col gap-2">
               <label htmlFor="message" className="font-semibold text-[16px] tracking-[-0.09px] text-card-foreground flex justify-between">
-                <span>Message <span aria-hidden="true" className="text-[#667eea]">*</span></span>
+                <span>Message <span aria-hidden="true" className="text-[#4f46e5]">*</span></span>
                 <span className="text-xs text-muted-foreground font-normal self-end">{formData.message.length}/2000</span>
               </label>
               <textarea
@@ -151,17 +154,23 @@ export function Contact() {
               />
             </div>
 
-            <div className="flex justify-center my-2">
-              <HCaptcha
-                ref={captchaRef}
-                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                onVerify={(token) => setCaptchaToken(token)}
-              />
+            <div className="flex justify-center my-2 min-h-[78px]">
+              {isFormInteracted ? (
+                <HCaptcha
+                  ref={captchaRef}
+                  sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                  onVerify={(token) => setCaptchaToken(token)}
+                />
+              ) : (
+                <div className="flex items-center justify-center text-[14px] text-muted-foreground border border-dashed border-border/50 rounded-xl w-full max-w-[300px] px-4 text-center">
+                  Touchez un champ pour activer la sécurité hCaptcha
+                </div>
+              )}
             </div>
 
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !captchaToken}
               className="w-full mt-2 rounded-xl px-4 py-3 font-semibold text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.45] transition-colors cursor-pointer bg-[#667eea] text-white hover:bg-[#5a6fd6] disabled:opacity-50 disabled:cursor-not-allowed outline-none focus-visible:ring-2 focus-visible:ring-[#667eea] focus-visible:ring-offset-2 dark:focus-visible:ring-offset-background"
             >
               {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}

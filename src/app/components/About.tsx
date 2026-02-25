@@ -1,4 +1,4 @@
-import imgAbout from "../../assets/0c8e08399e5532016c8fca63fe53b4338a2fe74b.png";
+import imgAbout from "../../assets/0c8e08399e5532016c8fca63fe53b4338a2fe74b.webp";
 
 export function About() {
   return (
@@ -38,6 +38,10 @@ export function About() {
           <img
             src={imgAbout}
             alt="Marceau TDML"
+            width="800"
+            height="800"
+            loading="lazy"
+            decoding="async"
             className="w-full h-[300px] sm:h-[400px] md:h-[480px] lg:h-[538px] object-cover rounded-2xl"
           />
         </div>

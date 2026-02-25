@@ -1,6 +1,6 @@
-import imgFitClub from "../../assets/3c9e706ef5aadd685e4f2994232a98ef48e8beec.png";
-import imgBe2Art from "../../assets/8eef97931d90371f9b7c550e680b141e38c765f5.jpg";
-import imgAvocats from "../../assets/60303adee7afb98f2b8384a329662f282ea1dee9.jpg";
+import imgFitClub from "../../assets/3c9e706ef5aadd685e4f2994232a98ef48e8beec.webp";
+import imgBe2Art from "../../assets/8eef97931d90371f9b7c550e680b141e38c765f5.webp";
+import imgAvocats from "../../assets/60303adee7afb98f2b8384a329662f282ea1dee9.webp";
 
 const projects = [
   {
@@ -54,14 +54,18 @@ export function Portfolio() {
                 <img
                   src={project.image}
                   alt={`Aperçu du projet ${project.title}`}
+                  width="800"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
-                  <h5 className="font-semibold text-[22px] md:text-[24px] leading-[1.45] tracking-[-0.48px] text-card-foreground">
+                  <h4 className="font-semibold text-[22px] md:text-[24px] leading-[1.45] tracking-[-0.48px] text-card-foreground">
                     {project.title}
-                  </h5>
+                  </h4>
                   <p className="font-medium text-[16px] md:text-[18px] leading-[1.4] tracking-[-0.09px] text-muted-foreground">
                     {project.description}
                   </p>
@@ -71,7 +75,7 @@ export function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Voir la maquette Figma du projet ${project.title} (nouvel onglet)`}
-                  className="font-medium text-[18px] leading-[1.45] tracking-[-0.09px] text-[#667eea] hover:text-[#5a6fd6] transition-colors outline-none rounded-md focus-visible:ring-2 focus-visible:ring-[#667eea]"
+                  className="font-medium text-[18px] leading-[1.45] tracking-[-0.09px] text-[#4f46e5] hover:text-[#4338ca] transition-colors outline-none rounded-md focus-visible:ring-2 focus-visible:ring-[#667eea]"
                 >
                   Voir le projet &rarr;
                 </a>

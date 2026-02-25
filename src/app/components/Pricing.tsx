@@ -56,7 +56,7 @@ function PricingCard({
           </h4>
           <p
             className={`font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] ${
-              isHighlighted ? "text-white/80" : "text-muted-foreground"
+              isHighlighted ? "text-white/90" : "text-muted-foreground"
             }`}
           >
             {subtitle}
@@ -74,7 +74,7 @@ function PricingCard({
           {priceLabel && (
             <span
               className={`font-medium text-[16px] md:text-[18px] tracking-[-0.09px] leading-[1.4] ${
-                isHighlighted ? "text-white/80" : "text-muted-foreground"
+                isHighlighted ? "text-white/90" : "text-muted-foreground"
               }`}
             >
               {priceLabel}
@@ -105,8 +105,8 @@ function PricingCard({
             buttonStyle === "primary"
               ? "bg-[#667eea] text-white hover:bg-[#5a6fd6] focus-visible:ring-[#667eea]"
               : buttonStyle === "white"
-              ? "bg-white text-[#667eea] hover:bg-white/90 shadow-sm focus-visible:ring-white"
-              : "bg-transparent text-[#667eea] border-2 border-[#667eea] hover:bg-[#667eea]/5 focus-visible:ring-[#667eea]"
+              ? "bg-white text-[#4f46e5] hover:bg-gray-50 shadow-sm focus-visible:ring-white"
+              : "bg-transparent text-[#4f46e5] border-2 border-[#4f46e5] hover:bg-[#4f46e5]/5 focus-visible:ring-[#4f46e5]"
           }`}
         >
           {buttonText}
