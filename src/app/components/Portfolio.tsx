@@ -1,6 +1,6 @@
 import imgFitClub from "../../assets/3c9e706ef5aadd685e4f2994232a98ef48e8beec.png";
 import imgBe2Art from "../../assets/8eef97931d90371f9b7c550e680b141e38c765f5.jpg";
-import imgLuminea from "../../assets/60303adee7afb98f2b8384a329662f282ea1dee9.png";
+import imgAvocats from "../../assets/60303adee7afb98f2b8384a329662f282ea1dee9.jpg";
 
 const projects = [
   {
@@ -19,10 +19,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "Luminea Skin",
-    description: "Site de blog SEO et d'affiliation pour la promotion de masques de luminothérapie.",
-    image: imgLuminea,
-    link: "https://www.figma.com/proto/vi9tN1tIZneLAyHHWBXvOO/Luminea-Skin-maquette?node-id=1-2&viewport=620%2C261%2C0.39&t=aCpGHrUISBdvXcuL-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1", 
+    title: "Méridien Avocats",
+    description: "Site vitrine pour un cabinet d'avocats parisien, avec un design épuré.",
+    image: imgAvocats,
+    link: "https://avocats.marceautdml.com", 
   },
 ];
 
